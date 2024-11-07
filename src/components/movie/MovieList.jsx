@@ -8,7 +8,6 @@ import useSWR from "swr"
 
 const MovieList = ({ type = "now_playing" }) => {
 	const [movies, setMovies] = useState([])
-	console.log("🚀 ~ MovieList ~ movies:", movies)
 	const { data, error, isLoading } = useSWR(
 		`https://api.themoviedb.org/3/movie/${type}?api_key=0e17369040051d4c2889cd9139f3b77f`,
 		fetcher
