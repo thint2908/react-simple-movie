@@ -8,6 +8,7 @@ import Header from "./components/layout/Header"
 import Main from "./components/layout/Main"
 import HomePage from "./pages/HomePage"
 import MoviesPage from "./pages/MoviesPage"
+import MovieDetailsPage from "./pages/MovieDetailsPage"
 
 function App() {
 	return (
@@ -26,6 +27,10 @@ function App() {
 					<Route
 						path="/movies"
 						element={<MoviesPage></MoviesPage>}
+					></Route>
+					<Route
+						path="/movies/:movieId"
+						element={<MovieDetailsPage></MovieDetailsPage>}
 					></Route>
 				</Route>
 			</Routes>
